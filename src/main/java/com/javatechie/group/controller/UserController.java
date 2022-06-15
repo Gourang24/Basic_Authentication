@@ -51,7 +51,7 @@ public class UserController {
         return "Hi " + user.getUserName() + " New Role assign to you by " + principal.getName();
     }
 
-    @GetMapping
+    @GetMapping("all")
     @Secured("ROLE_ADMIN")
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public List<User> loadUsers() {
